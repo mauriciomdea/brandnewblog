@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Brand New Code</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<meta name="author" content="Mauricio M. de Almeida" >
+		<meta name="description" content="Brand New Code" >
+		<meta name="keywords" content="programação, desenvolvimento, ruby, rails, javascript, xhtml, css, sql" >
+		<%= stylesheet_link_tag :all %>
+		<%= javascript_include_tag :defaults %>
+		<%= csrf_meta_tag %>
+	</head>
+<body>
+	
+<div id="wrapper" >
+
+	<div id="header" >
+		<div id="header_content" >
+			<h1>Brand New Code</h1>
+		</div>   
+	</div>
+
+	<div id="navigation" >
+		<div id="navigation_content" >
+			<p id="links" >
+				<%= link_to_unless_current 'Blog', { :action => "index" } %> : 
+				<%= link_to_unless_current 'Quem?', { :action => "quem" } %> : 
+				<%= link_to_unless_current 'Contato', { :action => "contato" } %>
+			</p>
+		</div>
+	</div>
+
+	<div id="main" >
+		<div id="main_content" >
+			<%= yield %>
+		</div>
+	</div>
+
+	<div id="footer" >
+		<div id="footer_content" >
+			<p id="" >Copyleft 2011 by Mauricio M. de Almeida</p>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

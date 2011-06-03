@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# Removing annoying deprecation warnings
+rvm rubygems current
+# Kill buggy rake 0.9.0
+gem uninstall rake
+# Long live rake 0.8.7!
+bundle update rake
+# Fix permissions on mysql2 0.2.7 (0.3.x NOT supported by rails 3.0.x)
+sudo install_name_tool -change libmysqlclient.18.dylib /usr/local/mysql/lib/libmysqlclient.18.dylib /Users/mauricio/.rvm/gems/ruby-1.9.2-p180/gems/mysql2-0.2.7/lib/mysql2/mysql2.bundle

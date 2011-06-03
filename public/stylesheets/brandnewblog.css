@@ -1,0 +1,106 @@
+/* Brand New Blog CSS */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: auto;
+	font-family: Verdana, Arial, sans-serif;
+	color: #222222;
+	font-size: 12px;
+}
+
+a {
+	color: #980905;
+	text-decoration: underline;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 18pt;
+	padding: 0px 0px 12px 0px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 14pt;
+	padding: 0px 0px 12px 0px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 10pt;
+	line-height: 2.5em;
+}
+
+p {
+	padding: 0px 0px 12px 0px;
+}
+
+#wrapper {
+	width: auto;
+	margin: 0px auto 0px auto;
+	padding: 0;
+}
+
+#header {
+	width: auto;
+	margin: 0;
+	padding: 10px 0px 0px 0px;
+}
+
+#header_content {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#navigation {
+	width: auto;
+	margin: 0;
+	padding: 10px 0px 10px 0px;
+}
+
+#navigation_content {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#main {
+	width: auto;
+	margin: 0px 0px 5px 0px;
+	padding: 10px;
+}
+
+#main_content {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#footer {
+	width: auto;
+	margin: 0;
+	padding: 5px;
+}
+
+#footer_content {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#links {
+	font-weight: bold;
+}
+
+.posts {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	width: 640px;
+	border-bottom: 1px dotted #222222;
+}
+
