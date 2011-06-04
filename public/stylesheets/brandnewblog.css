@@ -9,7 +9,7 @@ body {
 	width: auto;
 	font-family: Verdana, Arial, sans-serif;
 	color: #222222;
-	font-size: 12px;
+	font-size: 80%;
 }
 
 a {
@@ -19,24 +19,27 @@ a {
 
 h1 {
 	font-weight: bold;
-	font-size: 18pt;
-	padding: 0px 0px 12px 0px;
+	font-size: 160%;
+	padding: 0px 0px 10px 0px;
 }
 
 h2 {
 	font-weight: bold;
-	font-size: 14pt;
+	font-size: 120%;
 	padding: 0px 0px 12px 0px;
 }
 
 h3 {
 	font-weight: bold;
-	font-size: 10pt;
-	line-height: 2.5em;
+	font-size: 100%;
+	/* line-height: 200%; */
+	padding: 0px 0px 10px 0px;
 }
 
 p {
-	padding: 0px 0px 12px 0px;
+	padding: 0px 0px 10px 0px;
+	line-height: 110%;
+	padding: 0px 0px 10px 0px;
 }
 
 #wrapper {
