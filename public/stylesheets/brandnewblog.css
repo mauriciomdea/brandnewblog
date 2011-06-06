@@ -5,11 +5,20 @@
 	padding: 0;
 }
 
+html {
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
 body {
-	width: auto;
 	font-family: Verdana, Arial, sans-serif;
 	color: #222222;
+	background-color: #ffffff;
 	font-size: 80%;
+}
+
+div {
+	border: 0;
 }
 
 a {
@@ -26,7 +35,7 @@ h1 {
 h2 {
 	font-weight: bold;
 	font-size: 120%;
-	padding: 0px 0px 12px 0px;
+	padding: 0px 0px 10px 0px;
 }
 
 h3 {
@@ -43,67 +52,80 @@ p {
 }
 
 #wrapper {
-	width: auto;
+	width: 960px;
 	margin: 0px auto 0px auto;
-	padding: 0;
 }
 
 #header {
-	width: auto;
-	margin: 0;
+	width: 960px;
+	height: 40px;
+}
+
+#header_title {
+	width: 960px;
+	height: 30px;
+	float: left;
 	padding: 10px 0px 0px 0px;
 }
 
-#header_content {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
 #navigation {
-	width: auto;
-	margin: 0;
-	padding: 10px 0px 10px 0px;
+	width: 960px;
+	height: 30px;
 }
 
-#navigation_content {
+#navigation_links {
 	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
+	height: 25px;
+	float: left;
+	padding: 5px 0px 0px 0px;
 }
 
 #main {
-	width: auto;
-	margin: 0px 0px 5px 0px;
-	padding: 10px;
+	width: 960px;
+	margin: 0px 0px 0px 0px;
 }
 
 #main_content {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
+	width: 640px;
+	float: left;
+	padding: 10px 0px 0px 0px;
+}
+
+
+#main_sidebar {
+	width: 280px;
+	float: right;
+	padding: 10px 0px 0px 0px;
 }
 
 #footer {
-	width: auto;
-	margin: 0;
-	padding: 5px;
+	width: 960px;
+	height: 40px;
+	clear: both;
 }
 
 #footer_content {
-	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-#links {
-	font-weight: bold;
+	width: 640px;
+	height: 30px;
+	float: left;
+	padding: 10px 0px 0px 0px;
+	border-top: 1px dotted #222222;
 }
 
 .posts {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	width: 640px;
+}
+
+.widgets_title {
+	width: 280px;
+	height: 20px;
+	padding: 20px 0px 0px 0px;
 	border-bottom: 1px dotted #222222;
 }
 
+.widgets_body {
+	width: 280px;
+	padding: 10px 0px 0px 0px;
+	border-bottom: 1px dotted #222222;
+}

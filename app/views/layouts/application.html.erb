@@ -16,24 +16,27 @@
 <div id="wrapper" >
 
 	<div id="header" >
-		<div id="header_content" >
+		<div id="header_title" >
 			<h1>Brand New Code</h1>
 		</div>   
 	</div>
 
 	<div id="navigation" >
-		<div id="navigation_content" >
-			<p id="links" >
-				<%= link_to_unless_current 'Blog', { :action => "index" } %> : 
-				<%= link_to_unless_current 'Quem?', { :action => "quem" } %> : 
-				<%= link_to_unless_current 'Contato', { :action => "contato" } %>
-			</p>
+		<div id="navigation_links" >
+			<h3>
+				:<%= link_to_unless_current 'Blog', { :action => "index" } %> 
+				:<%= link_to_unless_current 'Quem?', { :action => "quem" } %> 
+				:<%= link_to_unless_current 'Contato', { :action => "contato" } %>
+			</h3>
 		</div>
 	</div>
 
 	<div id="main" >
 		<div id="main_content" >
 			<%= yield %>
+		</div>
+		<div id="main_sidebar" >
+			<%= render "shared/sidebar" %>
 		</div>
 	</div>
 
