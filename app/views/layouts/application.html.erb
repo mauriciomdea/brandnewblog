@@ -24,25 +24,24 @@
 	<div id="navigation" >
 		<div id="navigation_links" >
 			<h3>
-				:<%= link_to_unless_current 'Blog', { :action => "index" } %> 
-				:<%= link_to_unless_current 'Quem?', { :action => "quem" } %> 
-				:<%= link_to_unless_current 'Contato', { :action => "contato" } %>
+				:<%= link_to_unless_current 'Blog', { :action => "index" } %>&nbsp; 
+				:<%= link_to_unless_current 'Quem?', { :action => "quem" } %>&nbsp; 
+				<!-- ::<%= link_to_unless_current 'Contato', { :action => "contato" } %> -->
 			</h3>
 		</div>
 	</div>
 
-	<div id="main" >
-		<div id="main_content" >
-			<%= yield %>
-		</div>
-		<div id="main_sidebar" >
-			<%= render "shared/sidebar" %>
-		</div>
+	<div id="main">
+		
+		<%= yield %>
+		
 	</div>
 
 	<div id="footer" >
 		<div id="footer_content" >
-			<p id="" >Copyleft 2011 by Mauricio M. de Almeida</p>
+			<p id="" >Copyleft 2011 by <%= mail_to 'brandnewcode@gmail.com', 
+												   'Mauricio M. de Almeida',
+												   :encode => 'javascript' %>.</p>
 		</div>
 	</div>
 

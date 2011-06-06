@@ -28,7 +28,7 @@ a {
 
 h1 {
 	font-weight: bold;
-	font-size: 160%;
+	font-size: 180%;
 	padding: 0px 0px 10px 0px;
 }
 
@@ -48,7 +48,7 @@ h3 {
 p {
 	padding: 0px 0px 10px 0px;
 	line-height: 110%;
-	padding: 0px 0px 10px 0px;
+	text-align: justify;
 }
 
 #wrapper {
@@ -95,7 +95,7 @@ p {
 #main_sidebar {
 	width: 280px;
 	float: right;
-	padding: 10px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 #footer {
@@ -117,15 +117,18 @@ p {
 	padding-bottom: 10px;
 }
 
-.widgets_title {
+.widgets, .widgets_title, .widgets_box {
 	width: 280px;
+	padding: 10px 0px 10px 0px;
+}
+
+.widgets_title {
 	height: 20px;
 	padding: 20px 0px 0px 0px;
 	border-bottom: 1px dotted #222222;
 }
 
-.widgets_body {
-	width: 280px;
-	padding: 10px 0px 0px 0px;
+.widgets_box {
 	border-bottom: 1px dotted #222222;
+	margin: 0px 0px 10px 0px;
 }
