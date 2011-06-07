@@ -12,7 +12,7 @@ html {
 
 body {
 	font-family: Verdana, Arial, sans-serif;
-	color: #222222;
+	color: #333333;
 	background-color: #ffffff;
 	font-size: 80%;
 }
@@ -22,7 +22,8 @@ div {
 }
 
 a {
-	color: #980905;
+	/* color: #980905; */
+	color: #cc3333;
 	text-decoration: underline;
 }
 
@@ -45,10 +46,36 @@ h3 {
 	padding: 0px 0px 10px 0px;
 }
 
+h6 {
+	font-weight: normal;
+	font-size: 100%;
+	color: #999999;
+	margin: -10px 0px 10px 0px;
+}
+
 p {
 	padding: 0px 0px 10px 0px;
 	line-height: 110%;
 	text-align: justify;
+}
+
+pre {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	padding: 0px 0px 20px 0px;
+	/* background-color: #ffeeee; */
+}
+
+code {
+	font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+	font-size: 110%;
+	color: #993300;
+}
+
+ul {
+	padding: 0px 0px 10px 20px;
 }
 
 #wrapper {
@@ -96,6 +123,7 @@ p {
 	width: 280px;
 	float: right;
 	padding: 0px 0px 0px 0px;
+	margin-top: -5px;
 }
 
 #footer {
@@ -115,6 +143,13 @@ p {
 .posts {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
+}
+
+.post_thumbnail {
+	float: right; 
+	width: 96px;
+	margin: 0px 0px 10px 10px; 
+	border: 1px solid #333333;
 }
 
 .widgets, .widgets_title, .widgets_box {

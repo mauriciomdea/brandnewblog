@@ -6,7 +6,9 @@
 	
 		<img src="images/mauriciomdea.jpg" alt="Mauricio M. de Almeida" style="float: right; margin: 0px 0px 10px 10px; border: 1px solid #333333;">
 	
-		<p>Ol&aacute;, meu nome &eacute; Mauricio e sou desenvolvedor focado em 
+		<p>Ol&aacute;, meu nome &eacute; <%= mail_to 'brandnewcode@gmail.com', 
+											   'Mauricio M. de Almeida',
+											   :encode => 'javascript' %> e sou desenvolvedor focado em 
 		aplica&ccedil;&otilde;es web desde 1998. Sim, desde os tempos em que se 
 		usavam tabelas para diagrama&ccedil;&atilde;o HTML e javascript era feito 
 		"na unha".</p>
