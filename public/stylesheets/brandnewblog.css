@@ -55,7 +55,7 @@ h6 {
 
 p {
 	padding: 0px 0px 10px 0px;
-	line-height: 110%;
+	line-height: 120%;
 	text-align: justify;
 }
 
@@ -65,7 +65,6 @@ pre {
 	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 	padding: 0px 0px 20px 0px;
-	/* background-color: #ffeeee; */
 }
 
 code {
@@ -166,4 +165,9 @@ ul {
 .widgets_box {
 	border-bottom: 1px dotted #222222;
 	margin: 0px 0px 10px 0px;
+}
+
+.quotes {
+	font-style: italic;
+	text-align: left;
 }
