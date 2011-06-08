@@ -51,6 +51,23 @@
 
 	</div>
 	
+	<div id="<%= "post_2" %>" class="posts" >
+
+		<h2><%= "Real frakking long post title for God's sake! Please don't spoil the post on the title!" %></h2>
+		<h6>1977/02/03 by Mauricio Machado de Almeida Junior</h6>
+		
+		<%= link_to image_tag('bruce_on_rails-210x210.jpg', :class => 'post_thumbnail'), :action => 'post' %>
+
+		<!-- <img src="images/bruce_on_rails-210x210.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="96"> -->
+		
+		<p>Bruce Lee (São Francisco, 27 de novembro de 1940 — Hong Kong, 20 de julho de 1973) foi um ator, lutador, filósofo, diretor, roteirista e 
+		mestre em Artes Marciais de origem chinesa nascido nos Estados Unidos. Foi o fundador da arte marcial Jeet Kune Do. É considerado o artista 
+		marcial mais importante do século XX, seus filmes ajudaram a criar a febre das Artes Marciais, e foi o principal responsável pela popularização 
+		dos filmes de Hong Kong no mundo.</p>
+		<%= link_to 'Read more...', { :action => "post" } %>
+
+	</div>
+	
 	<!-- <div>
 		<h3 id=""><%= link_to 'More >', :action => 'post' %></h3>
 	</div> -->

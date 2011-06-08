@@ -5,8 +5,7 @@ Brandnewblog::Application.routes.draw do
   root :to => "home#index"
   
   # páginas estáticas (temporário)
-  match 'quem' => 'home#quem', :as => :quem
-  match 'contato' => 'home#contato', :as => :contato
+  match 'who' => 'home#who', :as => :who
   match 'post' => 'home#post', :as => :post
 
   #sroot :to => "home#index"
