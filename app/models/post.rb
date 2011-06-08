@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   
-  validates :author, :presence => true, :length => { :maximum => 50 }
-  validates :title, :presence => true, :length => { :maximum => 100 }
+  validates :author,  :presence => { :message => " cannot be empty." },
+                      :length => { :maximum => 50, :message => " cannot be longer than 50 characters." }
+  validates :title,   :presence => { :message => " cannot be empty." }, 
+                      :length => { :maximum => 100, :message => " cannot be longer than 100 characters." }
   
 end

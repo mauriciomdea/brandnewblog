@@ -1,75 +1,28 @@
 <div id="main_content" >
 
-	<div id="<%= "post_4" %>" class="posts" >
+	<% if @posts.empty? %>
+		<h2>No posts found.</h2>
+	<% end %>
 
-		<h2><%= "Mocks Aren't Stubs" %></h2>
-		<h6>2007/01/02 by Martin Fowler</h6>	
+	<% @posts.each do |post| %>
 
-		<%= link_to image_tag('lolcode.jpg', :class => 'post_thumbnail'), :action => 'post' %>
+	<div id="<%= "post_#{post.id}" %>" class="posts" >
+
+		<h2><%= post.title %></h2>
+		<h6>2007/01/02 by <%= post.author %></h6>	
+
+		<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), { :action => :show, :controller => :posts, :id => post } %>
 		
 		<!-- <img src="images/lolcode.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="128"> -->
 		
-		<p>The term 'Mock Objects' has become a popular one to describe special case objects that mimic real objects for testing. Most language 
-		environments now have frameworks that make it easy to create mock objects. What's often not realized, however, is that mock objects are but 
-		one form of special case test object, one that enables a different style of testing. In this article I'll explain how mock objects work, how 
-		they encourage testing based on behavior verification, and how the community around them uses them to develop a different style of testing. 
-		<%= link_to 'Read more...', { :action => "post" } %></p>
+		<p><%= post.excerpt %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
 
 	</div>
 	
-	<div id="<%= "post_3" %>" class="posts" >
-
-		<h2><%= "Evolutionary Database Design" %></h2>
-		<h6>2003/01/31 by Martin Fowler</h6>
-		
-		<%= link_to image_tag('refactoring_databases.jpg', :class => 'post_thumbnail'), :action => 'post' %>
-
-		<!-- <img src="images/refactoring_databases.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="96"> -->
-		
-		<p>Over the last few years we've developed a number of techniques that allow a database design to evolve as an application develops. This is 
-		a very important capability for agile methodologies. The techniques rely on applying continuous integration and automated refactoring to 
-		database development, together with a close collaboration between DBAs and application developers. The techniques work in both pre-production 
-		and released systems. <%= link_to 'Read more...', { :action => "post" } %></p>
-		
-
-	</div>
-	
-	<div id="<%= "post_2" %>" class="posts" >
-
-		<h2><%= "Mastering Code Fu" %></h2>
-		<h6>1977/02/03 by Bruce Leeroy</h6>
-		
-		<%= link_to image_tag('bruce_on_rails-210x210.jpg', :class => 'post_thumbnail'), :action => 'post' %>
-
-		<!-- <img src="images/bruce_on_rails-210x210.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="96"> -->
-		
-		<p>Bruce Lee (São Francisco, 27 de novembro de 1940 — Hong Kong, 20 de julho de 1973) foi um ator, lutador, filósofo, diretor, roteirista e 
-		mestre em Artes Marciais de origem chinesa nascido nos Estados Unidos. Foi o fundador da arte marcial Jeet Kune Do. É considerado o artista 
-		marcial mais importante do século XX, seus filmes ajudaram a criar a febre das Artes Marciais, e foi o principal responsável pela popularização 
-		dos filmes de Hong Kong no mundo.</p>
-		<%= link_to 'Read more...', { :action => "post" } %>
-
-	</div>
-	
-	<div id="<%= "post_2" %>" class="posts" >
-
-		<h2><%= "Real frakking long post title for God's sake! Please don't spoil the post on the title!" %></h2>
-		<h6>1977/02/03 by Mauricio Machado de Almeida Junior</h6>
-		
-		<%= link_to image_tag('bruce_on_rails-210x210.jpg', :class => 'post_thumbnail'), :action => 'post' %>
-
-		<!-- <img src="images/bruce_on_rails-210x210.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="96"> -->
-		
-		<p>Bruce Lee (São Francisco, 27 de novembro de 1940 — Hong Kong, 20 de julho de 1973) foi um ator, lutador, filósofo, diretor, roteirista e 
-		mestre em Artes Marciais de origem chinesa nascido nos Estados Unidos. Foi o fundador da arte marcial Jeet Kune Do. É considerado o artista 
-		marcial mais importante do século XX, seus filmes ajudaram a criar a febre das Artes Marciais, e foi o principal responsável pela popularização 
-		dos filmes de Hong Kong no mundo.</p>
-		<%= link_to 'Read more...', { :action => "post" } %>
-
-	</div>
+	<% end %>
 	
 	<!-- <div>
-		<h3 id=""><%= link_to 'More >', :action => 'post' %></h3>
+		<h3 id=""><%= link_to 'More >', :action => 'index' %></h3>
 	</div> -->
 	
 </div>

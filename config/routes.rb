@@ -4,9 +4,11 @@ Brandnewblog::Application.routes.draw do
   
   root :to => "home#index"
   
-  # páginas estáticas (temporário)
+  # static pages
   match 'who' => 'home#who', :as => :who
-  match 'post' => 'home#post', :as => :post
+  
+  # resources
+  resources :posts
 
   #sroot :to => "home#index"
    
