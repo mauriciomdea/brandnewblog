@@ -16,7 +16,7 @@
 		<% end %>
 		
 		<% if post.excerpt.empty? %>
-			<p><%= post.text[0,124] %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
+			<p><%= post.text[0,254] %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
 		<% else %>
 			<p><%= post.excerpt %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
 		<% end %>
