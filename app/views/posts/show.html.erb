@@ -2,7 +2,7 @@
 
 	<div id="<%= "post_#{@post.id}" %>" class="posts" >
 		
-		<p class="notice">Notices: <%= flash[:notice] %></p>
+		<p class="notice"><%= flash[:notice] %></p>
 
 		<h2><%= @post.title %></h2>
 		<h6>2007/01/02 by <%= @post.author %></h6>	

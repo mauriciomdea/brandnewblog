@@ -69,12 +69,17 @@ pre {
 
 code {
 	font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
-	font-size: 110%;
+	font-size: 100%;
 	color: #993300;
 }
 
 ul {
 	padding: 0px 0px 10px 20px;
+}
+
+label {
+	font-size: 90%;
+	font-weight: bold;
 }
 
 #wrapper {
@@ -109,7 +114,6 @@ ul {
 #main {
 	width: 960px;
 	margin: 0px 0px 0px 0px;
-	background-color: #ffeeee;
 }
 
 #main_content {
@@ -172,6 +176,20 @@ ul {
 	text-align: left;
 }
 
-.notice {
-	color: #339933;
+.notice, .warning, .error {
+	font-weight: bold;
+	color: green;
+}
+
+.warning {
+	color: yellow;
+}
+
+.error {
+	color: red;
+}
+
+.admin_button {
+	background-color: red;
+	color: #eeeeee;
 }

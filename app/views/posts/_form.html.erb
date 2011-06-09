@@ -11,22 +11,22 @@
 	</div>
 	<% end %>
  
-	<p class="field">
-	  <%= f.label :author %>: <%= f.text_field :author %>
+	<p>
+		<%= f.label :author %>: <%= f.text_field :author, :size => 50 %>
 	</p>
 	<p class="field">
-	  <%= f.label :title %>: <%= f.text_field :title %>
+		<%= f.label :title %>: <%= f.text_field :title, :size => 75 %>
 	</p>
 	<p class="field">
-	  <%= f.label :excerpt %>:<br/>
-	  <%= f.text_area :excerpt %>
+		<%= f.label :excerpt %>:<br/>
+		<%= f.text_area :excerpt, :cols => 75, :rows => 3 %>
 	</p>
 	<p class="field">
-	  <%= f.label :text %>:<br/>
-	  <%= f.text_area :text %>
+		<%= f.label :text %>:<br/>
+		<%= f.text_area :text, :cols => 75, :rows => 11 %>
 	</p>
 	<p class="actions">
-	  <%= f.submit %>
+		<%= f.submit %>
 	</p>
 
 <% end %>
