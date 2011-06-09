@@ -9,13 +9,17 @@
 	<div id="<%= "post_#{post.id}" %>" class="posts" >
 
 		<h2><%= post.title %></h2>
-		<h6>2007/01/02 by <%= post.author %></h6>	
+		<h6><%= post.created_at.to_s(:date_en) %> by <%= post.author %></h6>	
 
-		<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), { :action => :show, :controller => :posts, :id => post } %>
+		<% if post.thumbnail %>
+			<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), { :action => :show, :controller => :posts, :id => post } %>
+		<% end %>
 		
-		<!-- <img src="images/lolcode.jpg" style="float: right; margin:0px 0px 10px 10px; border: 1px solid #333333;" width="96" height="128"> -->
-		
-		<p><%= post.excerpt %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
+		<% if post.excerpt.empty? %>
+			<p><%= post.text[0,124] %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
+		<% else %>
+			<p><%= post.excerpt %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
+		<% end %>
 
 	</div>
 	
