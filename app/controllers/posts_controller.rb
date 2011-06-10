@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   
+  before_filter :authenticate, :except => [:show]
+  
   def new
     
     @post = Post.new
