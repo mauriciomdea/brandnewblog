@@ -11,7 +11,7 @@
 		<h2><%= post.title %></h2>
 		<h6><%= post.created_at.to_s(:date_en) %> by <%= post.author %></h6>	
 
-		<% if post.thumbnail %>
+		<% if post.thumbnail and !post.thumbnail.empty? %>
 			<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), { :action => :show, :controller => :posts, :id => post } %>
 		<% end %>
 		
