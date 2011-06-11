@@ -14,8 +14,8 @@
 </div>
 <div class="widgets_box">
 	<ul>
-		<li>2011</li>
-		<li>2010</li>
+		<li><%= link_to_unless_current '2011', blog_path(:year => '2011') %></li>
+		<li><%= link_to_unless_current '2010', blog_path(:year => '2010') %></li>
 	</ul>
 </div>
 

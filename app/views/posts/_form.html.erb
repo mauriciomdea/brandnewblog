@@ -1,3 +1,4 @@
+<% @post.tags.build %>
 <%= form_for(@post) do |f| %>
 
 	<% if @post.errors.any? %>
@@ -9,7 +10,7 @@
 	<% end %>
  
 	<div id="form">
-		<p>
+		<p class="field">
 			<%= f.label :author %>: <%= f.text_field :author, :size => 50 %>
 		</p>
 		<p class="field">
@@ -25,6 +26,9 @@
 		</p>
 		<p class="field">
 			<%= f.label :thumbnail %>: <%= f.text_field :thumbnail, :size => 75 %>
+		</p>
+		<p class="field">
+			<%= f.label :tags %>: <input type="text" name="string_tags" size="50" value="<%= @tags %>"> (separate tags with commas)
 		</p>
 		<p class="actions">
 			<%= f.submit %>

@@ -16,9 +16,9 @@
 		<% end %>
 		
 		<% if post.excerpt.empty? %>
-			<p><%= post.text[0,254] %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
+			<p><%= strip_html(post.text[0,254]).html_safe %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
 		<% else %>
-			<p><%= post.excerpt %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
+			<p><%= strip_html(post.excerpt).html_safe  %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
 		<% end %>
 
 	</div>

@@ -9,6 +9,10 @@ Brandnewblog::Application.routes.draw do
   
   # resources
   resources :posts
+  
+  # pretty URLs
+  #match 'blog(/:year)' => 'home#index', :ano => 2011
+  match 'blog/:year' => 'home#index', :as => :blog
 
   #sroot :to => "home#index"
    

@@ -9,6 +9,8 @@
 
 		<p><%= @post.text.html_safe %></p>
 		
+		<p><b>Tags:</b>&nbsp;<%= join_tags(@post) %></p>
+		
 	</div>
 	
 </div>

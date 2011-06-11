@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110608034312) do
+ActiveRecord::Schema.define(:version => 20110611025037) do
 
   create_table "posts", :force => true do |t|
     t.string   "author",     :limit => 50
@@ -18,6 +18,17 @@ ActiveRecord::Schema.define(:version => 20110608034312) do
     t.string   "excerpt"
     t.text     "text"
     t.string   "thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts_tags", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name",       :limit => 25
     t.datetime "created_at"
     t.datetime "updated_at"
   end

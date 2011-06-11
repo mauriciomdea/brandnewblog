@@ -2,7 +2,11 @@ class HomeController < ApplicationController
 
   def index
     
-    @posts = Post.all
+    if params[:year]
+      @posts = Post.where("created_at LIKE :year", { :year => "%#{params[:year]}%" }).order('created_at DESC').limit(5)
+    else
+      @posts = Post.order('created_at DESC').limit(5)
+    end
   
   end
 
