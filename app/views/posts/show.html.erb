@@ -11,6 +11,8 @@
 		
 		<p><b>Tags:</b>&nbsp;<%= join_tags(@post) %></p>
 		
+		<p><g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone></p>
+		
 	</div>
 	
 </div>
@@ -20,3 +22,7 @@
 	<%= render "shared/sidebar" %>
 	
 </div>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'pt-BR'}
+</script>
