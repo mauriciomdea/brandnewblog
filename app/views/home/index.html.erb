@@ -12,13 +12,13 @@
 		<h6><%= post.created_at.to_s(:date_en) %> by <%= post.author %></h6>	
 
 		<% if post.thumbnail and !post.thumbnail.empty? %>
-			<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), { :action => :show, :controller => :posts, :id => post } %>
+			<%= link_to image_tag( post.thumbnail, :class => 'post_thumbnail'), permalink_path(:year => post.year, :month => post.month, :id => post.to_param) %>
 		<% end %>
 		
 		<% if post.excerpt.empty? %>
-			<p><%= strip_html(post.text[0,254]).html_safe %>...&nbsp;<%= link_to 'Read more!', { :action => :show, :controller => :posts, :id => post } %></p>
+			<p><%= strip_html(post.text[0,254]).html_safe %>...&nbsp;<%= link_to 'Read more!', permalink_path(:year => post.year, :month => post.month, :id => post.to_param) %></p>
 		<% else %>
-			<p><%= strip_html(post.excerpt).html_safe  %>&nbsp;<%= link_to 'Read more...', { :action => :show, :controller => :posts, :id => post } %></p>
+			<p><%= strip_html(post.excerpt).html_safe  %>&nbsp;<%= link_to 'Read more...', permalink_path(:year => post.year, :month => post.month, :id => post.to_param) %></p>
 		<% end %>
 
 	</div>

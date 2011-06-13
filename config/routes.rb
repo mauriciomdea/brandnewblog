@@ -13,6 +13,7 @@ Brandnewblog::Application.routes.draw do
   # pretty URLs
   #match 'blog(/:year)' => 'home#index', :ano => 2011
   match 'blog/:year' => 'home#index', :as => :blog
+  match 'blog/:year/:month/:id' => 'posts#show', :as => :permalink
 
   #sroot :to => "home#index"
    
