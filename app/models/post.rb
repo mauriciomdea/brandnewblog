@@ -4,14 +4,20 @@ class Post < ActiveRecord::Base
   
   attr_accessible :author, :title, :excerpt, :thumbnail
   
-  #attr_reader :year, :month
-  
   validates :author,    :presence => { :message => " cannot be empty." },
                         :length => { :maximum => 50, :message => " cannot be longer than 50 characters." }
   validates :title,     :presence => { :message => " cannot be empty." }, 
                         :length => { :maximum => 100, :message => " cannot be longer than 100 characters." }
   validates :excerpt,   :length => { :maximum => 255, :message => " cannot be longer than 255 characters." }
   validates :thumbnail, :length => { :maximum => 255, :message => " cannot be longer than 255 characters." }
+  
+  def headline
+    if self.excerpt.empty?
+      self.text[0,254]
+    else
+      self.excerpt
+    end
+  end
   
   def year
     self.created_at.year

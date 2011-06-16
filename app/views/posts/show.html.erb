@@ -4,13 +4,20 @@
 		
 		<p class="notice"><%= flash[:notice] %></p>
 
+		<!-- Header -->
 		<h2><%= @post.title %></h2>
 		<h6><%= @post.created_at.to_s(:date_en) %> by <%= @post.author %></h6>	
 
+		<!-- Excerpt -->
+		<p style="font-style: italic;"><%= @post.excerpt.html_safe %></p>
+
+		<!-- Content text -->
 		<p><%= @post.text.html_safe %></p>
 		
-		<p><b>Tags:</b>&nbsp;<%= join_tags(@post) %></p>
+		<!-- Tags -->
+		<p style="font-weight: bold;"><%= join_tags(@post.tags).html_safe %></p>
 		
+		<!-- Social media sharing -->
 		<p><g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone></p>
 		
 	</div>
@@ -19,10 +26,11 @@
 
 <div id="main_sidebar" >
 	
-	<%= render "shared/sidebar" %>
+	<%= render "shared/sidebar", :object => @tags %>
 	
 </div>
 
+<!-- Google +1 Jabascript -->
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
   {lang: 'pt-BR'}
 </script>

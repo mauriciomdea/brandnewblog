@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   
   def index
     
+    # TODO: create Admin page
     redirect_to :action => :index, :controller => :home
     
   end
@@ -38,6 +39,7 @@ class PostsController < ApplicationController
   def show
     
     @post = Post.find(params[:id])
+    @tags = Tag.order('name')
   
   end
   

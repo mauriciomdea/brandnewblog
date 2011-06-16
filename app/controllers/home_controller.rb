@@ -7,6 +7,8 @@ class HomeController < ApplicationController
     else
       @posts = Post.order('created_at DESC').limit(5)
     end
+    
+    @tags = Tag.order('name')
   
   end
 
