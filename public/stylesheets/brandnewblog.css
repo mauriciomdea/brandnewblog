@@ -143,6 +143,11 @@ label {
 	border-top: 1px dotted #222222;
 }
 
+.title_link {
+	color: #333333;
+	text-decoration: none;
+}
+
 .posts {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
@@ -187,9 +192,4 @@ label {
 
 .error {
 	color: red;
-}
-
-.admin_button {
-	background-color: red;
-	color: #eeeeee;
 }

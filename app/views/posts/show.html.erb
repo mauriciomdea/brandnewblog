@@ -12,13 +12,27 @@
 		<p style="font-style: italic;"><%= @post.excerpt.html_safe %></p>
 
 		<!-- Content text -->
-		<p><%= @post.text.html_safe %></p>
+		<p><%= @post.text.html_safe %><br/></p>
 		
 		<!-- Tags -->
-		<p style="font-weight: bold;"><%= join_tags(@post.tags).html_safe %></p>
+		<p><span style="font-weight: bold;">tags: </span><%= join_tags(@post.tags).html_safe %></p>
 		
 		<!-- Social media sharing -->
-		<p><g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone></p>
+		<div id="social_sharing" style="margin: 10px 0px 5px 0px; height:25px">
+		<div id="google_share" style="float: left; border:none; width:80px;">
+			<g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone>
+		</div>
+		<div id="twitter_share" style="float: left; none; width:120px; height:25px">
+			<a href="http://twitter.com/share" class="twitter-share-button" 
+				data-count="horizontal" 
+				data-text="<%= @post.title %>"
+				data-via="brandnewcode" 
+				data-lang="en">Tweet</a>
+		</div>
+		<iframe id="facebook_share" src="http://www.facebook.com/plugins/like.php?href=<%= request.request_uri %>"
+		        scrolling="no" frameborder="0" 
+		        style="float:left; border:none; width:400px; height:25px"></iframe>
+		</div>
 		
 	</div>
 	
@@ -30,7 +44,10 @@
 	
 </div>
 
-<!-- Google +1 Jabascript -->
+<!-- Google Plus One Javascript -->
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
   {lang: 'pt-BR'}
 </script>
+
+<!-- Twitter share Javascript -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
