@@ -15,24 +15,34 @@
 		<p><%= @post.text.html_safe %><br/></p>
 		
 		<!-- Tags -->
-		<p><span style="font-weight: bold;">tags: </span><%= join_tags(@post.tags).html_safe %></p>
+		<p><span style="font-weight: bold;">palavras chave: </span><%= join_tags(@post.tags).html_safe %></p>
 		
 		<!-- Social media sharing -->
-		<div id="social_sharing" style="margin: 10px 0px 5px 0px; height:25px">
-		<div id="google_share" style="float: left; border:none; width:80px;">
-			<g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone>
+		<p style="margin: 10px 0px 0px 0px; font-weight: bold;">compartilhe:</p>
+		<div id="social_sharing" style="margin: 0px 0px 5px 0px; height:25px">
+			<div id="google_share" style="float: left; border:none; width:80px;">
+				<g:plusone size="medium" href="<%= request.request_uri %>"></g:plusone>
+			</div>
+			<div id="twitter_share" style="float: left; none; width:120px; height:25px">
+				<a href="http://twitter.com/share" class="twitter-share-button" 
+					data-count="horizontal" 
+					data-text="<%= @post.title %>"
+					data-via="brandnewcode" 
+					data-lang="en">Tweet</a>
+			</div>
+			<iframe id="facebook_share" src="http://www.facebook.com/plugins/like.php?href=<%= request.request_uri %>"
+			        scrolling="no" frameborder="0" 
+			        style="float:left; border:none; width:400px; height:25px"></iframe>
 		</div>
-		<div id="twitter_share" style="float: left; none; width:120px; height:25px">
-			<a href="http://twitter.com/share" class="twitter-share-button" 
-				data-count="horizontal" 
-				data-text="<%= @post.title %>"
-				data-via="brandnewcode" 
-				data-lang="en">Tweet</a>
+		
+		<!-- Facebook comments -->
+		<p style="margin: 10px 0px 0px 0px; font-weight: bold;">comente:</p>
+		<div id="fb-root">
 		</div>
-		<iframe id="facebook_share" src="http://www.facebook.com/plugins/like.php?href=<%= request.request_uri %>"
-		        scrolling="no" frameborder="0" 
-		        style="float:left; border:none; width:400px; height:25px"></iframe>
-		</div>
+		<fb:comments href="<%= request.request_uri %>" num_posts="5" width="640">
+		</fb:comments>
+		
+		
 		
 	</div>
 	
@@ -51,3 +61,6 @@
 
 <!-- Twitter share Javascript -->
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<!-- Facebook Javascripts -->
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
