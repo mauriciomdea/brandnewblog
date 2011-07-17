@@ -15,6 +15,7 @@
 
 	<div id="header" >
 		<div id="header_title" >
+			<%= link_to image_tag('/images/brandnewlogo_light_small.png', { :class => "logo_img" }), { :action => "index", :controller => "home" } %>
 			<h1><%= link_to_unless_current 'Brand New Code', { :action => "index", :controller => "home" }, { :class => "title_link" } %></h1>
 		</div>   
 	</div>
