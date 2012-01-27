@@ -16,9 +16,7 @@
 <div id="wrapper" >
 
 	<div id="header" >
-		<div id="header_title" >
-			<h1><%= link_to_unless_current 'Brand New Code', { :action => "index", :controller => "home" }, { :class => "title_link" } %></h1>
-		</div>   
+		<h1><%= link_to_unless_current 'Brand New Code', { :action => "index", :controller => "home" }, { :class => "title_link" } %></h1>
 	</div>
 	
 	<div style="clear: both"></div>
@@ -44,7 +42,7 @@
 
 	<div id="footer" >
 		<div id="footer_content" >
-			<p id="" >Proudly coded by <%= mail_to 'brandnewcode@gmail.com', 
+			<p id="" >Proudly coded by <%= mail_to 'mma+website@brandnewcode.com.br', 
 												   'Mauricio M. de Almeida',
 												   :encode => 'javascript' %> using Ruby on Rails and not Wordpress.</p>
 		</div>
